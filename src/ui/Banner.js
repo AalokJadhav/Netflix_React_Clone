@@ -4,6 +4,7 @@ import { generateImageUrl, ImageSizes } from "utils/tmdb";
 import tmdbApi from 'api/tmdb';
 
 function Banner() {
+
   const [movie, setMovie] = useState({});
 
   useEffect(() => {
@@ -19,6 +20,10 @@ function Banner() {
     fetchBannerMovie();
   }, []);
 
+  const signin = () => {
+    window.location.href = "https://www.netflix.com/in/login";
+  }
+
   return (
     <div
       className="banner"
@@ -27,11 +32,11 @@ function Banner() {
       }}
     >
       <div className="banner__contents">
-        <h1 className="banner__title">
+        <h1 className="banner__title" style={{backgroundColor:'#e50914', borderRadius:'12px', width:'max-content', padding:'12px'}}>
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
+          <button className="banner__button" onClick={signin}>Play</button>
           <button className="banner__button">My List</button>
         </div>
         <h1 className="banner__description">

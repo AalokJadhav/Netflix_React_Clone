@@ -20,6 +20,7 @@
     font-weight: 800;
     padding-bottom: 0.3rem;
     margin: 10px 0;
+
   }
 
   &__description {
@@ -33,6 +34,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding-left: 15px;
+
+
   }
 
   &__button {

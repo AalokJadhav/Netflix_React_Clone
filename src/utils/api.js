@@ -6,7 +6,7 @@ class Api {
   constructor({ baseUrl, searchParams }) {
     this._baseUrl = baseUrl;
     this._baseSearchParams = searchParams || {};
-    console.log(this._baseUrl);
+    // console.log(this._baseUrl);
   }
 
   async get(endpoint, params) {
